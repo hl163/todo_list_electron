@@ -4,6 +4,7 @@ import { electronApp, is, optimizer } from '@electron-toolkit/utils'
 import path from 'node:path'
 
 const appIcon = path.join(__dirname, '../../resources/icon.icns')
+const trayIcon = path.join(__dirname, '../../resources/tray.png')
 let mainWindow: BrowserWindow | null = null
 let tray: Tray | null = null
 
@@ -119,7 +120,7 @@ app.whenReady().then(() => {
     }
   ])
   Menu.setApplicationMenu(menu)
-  tray = new Tray(__dirname + '/../../resources/tray.png')
+  tray = new Tray(trayIcon) //__dirname + '/../../resources/tray.png')
 
   const contextMenu = Menu.buildFromTemplate([
     {
@@ -129,8 +130,7 @@ app.whenReady().then(() => {
       }
     },
     {
-      label: '设置',
-      // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+      label: '设置', // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
       click: () => {
         mainWindow?.webContents.send('open-settings')
       }
