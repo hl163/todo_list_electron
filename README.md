@@ -1,10 +1,7 @@
-# ai_todo_list_electron
+# todo list
 
-An Electron application with React and TypeScript
+一个用于记录todo的工具
 
-## Recommended IDE Setup
-
-- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
 ## Project Setup
 

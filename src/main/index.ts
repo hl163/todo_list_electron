@@ -7,7 +7,6 @@ const appIcon = path.join(__dirname, '../../resources/icon.icns')
 const trayIcon = path.join(__dirname, '../../resources/tray.png')
 let mainWindow: BrowserWindow | null = null
 let tray: Tray | null = null
-
 function createWindow(): void {
   // Create the browser window.
 
